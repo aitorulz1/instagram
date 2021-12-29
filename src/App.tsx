@@ -5,6 +5,7 @@ import Input from './components/Input'
 import Button from './components/Button'
 import Title from './components/Title'
 import Link from './components/Link'
+import Center from './components/Center'
 
 import './App.css';
 
@@ -17,7 +18,9 @@ function App() {
         <Input label='Correo' placeholder='Correo' />
         <Input label='Contraseña'  placeholder='Contraseña' />
         <Button block={true}>Enviar</Button>
-        <Link >Ir al Registro</Link>
+        <Center>
+          <Link >Ir al Registro</Link>
+        </Center>
       </Card>
     </Container>
   </div>
