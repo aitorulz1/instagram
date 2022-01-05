@@ -7,14 +7,19 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Login from './containers/Auth/Login';
+import Register from './containers/Auth/Register';
+import NewsFeed from './containers/NewsFeed/NewsFeed';
+
 
 export default class App extends React.Component {
   public render() {
     return (
       <BrowserRouter>
-      <Routes>
-          <Route path="/" element={<Login />}/>    
-      </Routes>
+        <Routes>
+            <Route path="/" element={<Login />}/>    
+            <Route path="/register" element={<Register />}/>                
+            <Route path="/app/newsfeed" element={<NewsFeed />}/>    
+        </Routes>
     </BrowserRouter>
     );
   }

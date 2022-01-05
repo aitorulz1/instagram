@@ -8,17 +8,17 @@ import Button from '../../components/Button'
 import Title from '../../components/Title'
 import Center from '../../components/Center'
 
-export default class Login extends React.Component {
+export default class Register extends React.Component {
     public render() {
         return(
             <Container center={true}>
                 <Card>
-                    <Title>Iniciar Sesión</Title>
+                    <Title>Resgistro</Title>
                     <Input label='Correo' placeholder='Correo' />
                     <Input label='Contraseña'  placeholder='Contraseña' />
                     <Button block={true}>Enviar</Button>
                     <Center>
-                    <Link to="/register">Ir al Registro</Link>
+                    <Link to="/">Iniciar Sesión</Link>
                     </Center>
                 </Card>
             </Container>
