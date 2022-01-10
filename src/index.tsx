@@ -1,15 +1,24 @@
-import React, { Fragment } from 'react';
+import * as React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { Provider } from 'react-redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import services from './services'
+import * as reducers from './ducks'
 
+const store = createStore(combineReducers({
+  ...reducers,
+}), applyMiddleware(thunk.withExtraArgument(services)))
 
 ReactDOM.render(
-    <div>
+    <Provider store={store}>
       <App />
-    </div>,
+    </Provider>,
   document.getElementById('root')
 );
 
